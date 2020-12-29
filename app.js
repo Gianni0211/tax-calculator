@@ -13,6 +13,7 @@ let items = [];
 
 /* *********************************************EVENT LISTENERS************************************** */
 
+//event for add item
 form.addEventListener('submit', e => {
  e.preventDefault(); //stops the send of the form to the server
 if(select.value == 'Select item' || quantityForm.value <= 0 
@@ -32,7 +33,7 @@ else {
    imported == -1 ? imported = false : imported = true; // if imported is == -1 it will transform imported to false and true otherwise
    let addedItem  = {
     item: item,
-    price : itemTotalPrice(price, quantity),
+    price : itemTotalPrice(price, quantity), //apply the price multiplied by the quantity
     cat: cat,
     imported: imported,
     quantity: quantity
@@ -101,7 +102,7 @@ let itemTotalPrice = (price, quantity) => {
 let roundToNearest = (num) => {
 let splittedNumber = num.toString().split('');
   let lastDigit = splittedNumber[splittedNumber.length -1];
-  if (lastDigit  <5){
+  if (lastDigit  <5 && lastDigit >0){
   lastDigit = 5;
   splittedNumber[splittedNumber.length -1 ] = lastDigit.toString();
   }

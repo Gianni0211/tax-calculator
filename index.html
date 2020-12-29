@@ -3,37 +3,49 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <!-- Google fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+ <!-- internal css -->
  <link rel="stylesheet" href="style.css">
  <title>Application</title>
  
 </head>
 <body>
  <!--Form-->
- <form class="form" id="form">
-  <label for="select" >Choose the items you want to add to your bill</label>
-  <select  id="select">
-   <option selected disabled >Select item</option>
-   <option value="books|book at 12.49">Book at 12.49</option>
-   <option value="music|music CD at 14.99">Music CD at 14.99</option>
-   <option value="food|chocolate bar at 0.85">Chocolate bar at 0.85</option>
-   <option value="food|imported box of chocolates at 10.00">Imported box of chocolates at 10.00</option>
-   <option value="beauty|imported bottle of perfume at 47.50">Imported bottle of perfume at 47.50</option>
-   <option value="beauty|imported bottle of perfume at 27.99">Imported bottle of perfume at 27.99</option>
-   <option value="beauty|bottle of perfume at 18.99">Bottle of perfume at 18.99</option>
-   <option value="medical|packet of headache pills at 9.75">Packet of headache pills at 9.75</option>
-   <option value="food|box of imported chocolates at 11.25">Box of imported chocolates at 11.25</option>
-  </select>
-  <label for="quantityForm" >Choose the quantity</label>
-  <input id="quantityForm" type="number" value="1" placeholder="How many?">
-  <div>
-   <button  class="clear btn" id="clearBtn">Clear </button>
-   <button type="submit" class="submit btn" id="submitBtn">Add to bill</button>
-  </div>
- </form>
-<!-- Output  -->
- <div id="resultBill">
+ <div class="app-container">
+ <div class="form-container">
+  <h1 class="title">Choose the items you want to add to your bill</h1>
+  <form class="form" id="form">
+   
+   <select class="input"  id="select">
+    <option selected disabled >Select item</option>
+    <option value="books|book at 12.49">Book at 12.49</option>
+    <option value="music|music CD at 14.99">Music CD at 14.99</option>
+    <option value="food|chocolate bar at 0.85">Chocolate bar at 0.85</option>
+    <option value="food|imported box of chocolates at 10.00">Imported box of chocolates at 10.00</option>
+    <option value="beauty|imported bottle of perfume at 47.50">Imported bottle of perfume at 47.50</option>
+    <option value="beauty|imported bottle of perfume at 27.99">Imported bottle of perfume at 27.99</option>
+    <option value="beauty|bottle of perfume at 18.99">Bottle of perfume at 18.99</option>
+    <option value="medical|packet of headache pills at 9.75">Packet of headache pills at 9.75</option>
+    <option value="food|box of imported chocolates at 11.25">Box of imported chocolates at 11.25</option>
+   </select>
+   <label for="quantityForm" >Choose the quantity</label>
+   <input class="input" id="quantityForm" type="number" value="1">
+   <div>
+    <button  class="clear btn" id="clearBtn">Clear </button>
+    <button type="submit" class="submit btn" id="submitBtn">Add to bill</button>
+   </div>
+  </form>
  </div>
- <div id="result"></div>
+ <!-- Output  -->
+ <div class="result-container">
+
+  <div id="resultBill">
+  </div>
+  <div id="result"></div>
+ </div>
+ </div>
 
  <script src="app.js"></script>
 </body>
